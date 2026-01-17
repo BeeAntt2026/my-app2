@@ -5,18 +5,20 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-// import { ptb2 } from './ptb2/ptb2.spec';
-// import { Learndirective } from './learndirective/learndirective.component';
-// import { Ex10 } from './ex10/ex10.component';
-import { LunarYear } from './lunar-year/lunar-year.spec';
 import { Learndirective } from './learndirective/learndirective';
-import { LunarYearComponent } from './lunar-year/lunar-year';
+import { ListCustomer } from './list-customer/list-customer';
+import { ListCustomer2 } from './list-customer-2/list-customer-2';
+import { Customerdetail } from './customerdetail/customerdetail';
+import { ProductCatalog } from './product-catalog/product-catalog';
 
 @NgModule({
   declarations: [
     App,
     Learndirective,
-    LunarYearComponent  // Changed from LunarYear to LunarYearComponent
+    ListCustomer,
+    ListCustomer2,
+    Customerdetail,
+    ProductCatalog  // Changed from LunarYear to LunarYearComponent
   ],
   imports: [
     BrowserModule,

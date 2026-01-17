@@ -1,0 +1,33 @@
+
+<div class="catalog-container">
+  <ng-container *ngFor="let category of categories">
+    <table border="1" style="width:100%; margin-bottom: 30px; border-collapse: collapse;">
+      <tr>
+        <td style="width: 120px; font-weight: bold;">Ma Danh Muc</td>
+        <td style="font-weight: bold;">Ten Danh Muc</td>
+      </tr>
+      <tr>
+        <td>{{ category.CateId }}</td>
+        <td>{{ category.CateName }}</td>
+      </tr>
+    </table>
+    <table border="1" style="width:100%; margin-bottom: 40px; border-collapse: collapse;">
+      <tr style="background: #f0f0f0; font-weight: bold;">
+        <td>Ma San Pham</td>
+        <td>Ten San Pham</td>
+        <td>Gia San Pham</td>
+        <td>Picture</td>
+      </tr>
+      <ng-container *ngFor="let product of category.Products">
+        <tr>
+          <td>{{ product.ProductId }}</td>
+          <td>{{ product.ProductName }}</td>
+          <td>{{ product.Price }}</td>
+          <td>
+            <img [src]="product.Image" [alt]="product.ProductName" style="height:60px; width:auto; display:block; margin:auto;" />
+          </td>
+        </tr>
+      </ng-container>
+    </table>
+  </ng-container>
+</div>
